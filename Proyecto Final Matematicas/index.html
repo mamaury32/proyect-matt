@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Territorio Virtual</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="panel">
+        <h2>Análisis de Plano</h2>
+        
+        <div class="upload-section">
+            <label for="input-imagen" class="btn-upload">📂 Cargar Plano / Imagen</label>
+            <input type="file" id="input-imagen" accept="image/*">
+        </div>
+
+        
+        
+        <div id="coords-display">Vértices actuales: 0</div>
+        
+        <div class="info-box">
+            Área Calculada:<br>
+            <span id="area-value">0.00</span> u²
+        </div>
+
+        <button class="btn-calc" id="btn-calcular">Cerrar Región y Calcular</button>
+        <button class="btn-reset" id="btn-reiniciar">Reiniciar Mapa</button>
+
+        <p class="nota-pie">
+            * El sistema ajusta las coordenadas automáticamente al tamaño de la imagen subida.
+        </p>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
